@@ -62,8 +62,9 @@ def check():
                    *(score()), form['phone'], request.remote_addr))
         conn.commit()
     except Exception as e:
-        return u"请检查各项是否全部填写。禁止重复提交。"
+        return "Please check whether all items are finished. \
+                Repetead submission is now allowed."
 
-    return score()
+    return "<div style=\"margin: auto;\"><h3>Thanks for your participation!</h3></div>"
 
 app.run()
